@@ -12,8 +12,11 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
+    names = []
    self.artists.each do |a|
-     puts "#{a.name}"
+     names << a.name
+    end
+    names 
     end
   end
 end
